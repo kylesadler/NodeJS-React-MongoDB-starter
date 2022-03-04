@@ -8,3 +8,8 @@ Boilerplate code for starter website
 2. From the main directory, run `npm i` to install dependencies.
 3. Run `npm run build` to build the frontend (use `npm run build-debug` to build with debugging). You'll need to run this everytime you make changes to the frontend.
 4. Run `npm start` to start the server on `localhost:8080`.
+
+## First Time Setup
+
+1. Change website title in `frontend/public/index.html`.
+2. Generate a favicon, for example with `https://realfavicongenerator.net/`. Add the files to `frontend/public`, and add the favicon html header links to `frontend/public/index.html`.
