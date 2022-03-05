@@ -1,5 +1,4 @@
-#!/bin/bash 
-
+#!/bin/bash
 apt_install () {
     apt -y install $@
 }
@@ -23,7 +22,3 @@ install_docker () {
     apt_update
     apt_install docker-ce docker-ce-cli containerd.io
 }
-
-install_docker
-
-docker build --tag server-image . && docker run -d -p 8080:8080 --name server server-image
