@@ -4,7 +4,7 @@
   "description": "Boilerplate code for starter website",
   "scripts": {
     "build": "npm run build--debug -- --no-source-maps",
-    "build--debug": "cd frontend && parcel build public/*.html public/*.jpg public/*.ico public/*.png --dist-dir dist",
+    "build--debug": "parcel build frontend/public/*.html frontend/public/*.jpg frontend/public/*.ico frontend/public/*.png --dist-dir frontend/dist",
     "start": "node server.js"
   },
   "repository": {
