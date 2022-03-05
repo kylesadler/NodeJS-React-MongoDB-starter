@@ -11,5 +11,5 @@ Boilerplate code for starter website
 
 ## First Time Setup
 
-1. Change website title in `frontend/public/index.html`.
-2. Generate a favicon, for example with `https://realfavicongenerator.net/`. Add the files to `frontend/public`, and add the favicon html header links to `frontend/public/index.html`.
+1. Change website and background color in title in `frontend/public/index.html`.
+2. Use a favicon generator to generate favicon files (ex. with `https://realfavicongenerator.net/`). Add the files to `frontend/public` and the favicon html headers to `frontend/public/index.html`.

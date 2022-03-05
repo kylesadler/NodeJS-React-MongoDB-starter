@@ -1,6 +1,5 @@
 import React from "react";
-import HelloPage from "./pages/hello/App";
 
 export default () => {
-  return <HelloPage />;
+  return <h1 style={{ textAlign: "center" }}>Website Works!</h1>;
 };
