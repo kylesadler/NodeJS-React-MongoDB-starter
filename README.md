@@ -14,8 +14,13 @@ Boilerplate code for starter website
 3. Update the `name`, `description` and github links in `package.json`
 4. Select HTTP / HTTPS option, port, and domain name in `./scripts/config`.
 
-## Deploy on Ubuntu Server
+## Deployment
 
-1. Copy and paste `./scripts/init` into the terminal. Add key to GitHub as directed.
-2. Clone the GitHub repo
-3. Run `./scripts/deploy` to deploy. Run `./scripts/update` to update.
+### Manually Deploy on Ubuntu Server
+
+1. Create server using Infrastructure as a Service provider such as [Vultr](https://vultr.com/). Log in using SSH.
+1. Copy and paste `./scripts/manual_deploy/init` into the terminal. Add key to GitHub as directed.
+1. Clone the GitHub repo.
+1. Run `./scripts/manual_deploy/deploy` to deploy. Run `./scripts/manual_deploy/update` to update.
+
+### Deploy on Kubernetes Engine

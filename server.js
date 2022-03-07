@@ -4,7 +4,16 @@ const app = express();
 const server = require("http").createServer(app);
 const port = 8080;
 
-// app.use(cors({ origin: "*" }));
+// for testing
+// const corsOptions = {
+//   origin: "*",
+//   optionsSuccessStatus: 200,
+// };
+// app.use(cors(corsOptions));
+app.use(express.json());
+
+// to connect to the db
+// const db = require("./db.js");
 
 // connect api routes from "backend/api.js" to "/api" url prefix
 app.use("/api", require("./backend/api"));
@@ -16,6 +25,6 @@ app.get("*", (req, res) => {
   res.sendFile(`${staticDir}/index.html`);
 });
 
-var listener = server.listen(port, () => {
+const listener = server.listen(port, () => {
   console.log("Server started at port: " + listener.address().port);
 });
