@@ -1,4 +1,5 @@
 const express = require("express");
+const compression = require("compression");
 // const cors = require("cors");
 const app = express();
 const server = require("http").createServer(app);
@@ -19,6 +20,8 @@ initDatabase({
 //   optionsSuccessStatus: 200,
 // };
 // app.use(cors(corsOptions));
+
+app.use(compression());
 app.use(express.json());
 
 // connect api routes from "backend/api.js" to "/api" url prefix
