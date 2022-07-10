@@ -52,6 +52,7 @@ stringData:
   POSTGRES_PASSWORD: ewnb3X8LJ%u%bq8+uMhavLW5b*c
   POSTGRES_USER: admin
   POSTGRES_DB: production
+  POSTGRES_PORT: "5432"
 
 ---
 apiVersion: apps/v1

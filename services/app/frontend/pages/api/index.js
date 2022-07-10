@@ -1,5 +1,13 @@
 const { handleData } = require("../../util");
 
-export default function handler(request, response) {
-  response.status(200).json({ test: "passed" });
+const DatabaseTable = require("../../../backend/database/DatabaseTable");
+
+const simulationsTable = new DatabaseTable("simulations");
+
+export default async function handler(request, response) {
+  const data = await simulationsTable.find();
+  response.status(200).json({
+    text: "await simulationsTable.find()",
+    data: data.rows,
+  });
 }

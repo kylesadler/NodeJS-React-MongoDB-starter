@@ -46,3 +46,5 @@ spec:
           envFrom:
             - secretRef:
                 name: app-secret
+            - secretRef:
+                name: postgres-secret

@@ -1,4 +1,4 @@
-const { getDatabase } = require("./db");
+const { getDatabase } = require("./postgres");
 
 const toPlaceholderIndex = (index, offset = 0) => {
   return `$${index + 1 + offset}`;
