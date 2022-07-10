@@ -1,0 +1,3 @@
+docker_build('app-image', '.')
+k8s_yaml('kubernetes.yaml')
+k8s_resource('app', port_forwards=3000)

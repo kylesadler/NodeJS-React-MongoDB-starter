@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Boilerplate code for starter website",
   "scripts": {
-    "build": "npm run build--debug -- --no-source-maps",
-    "build--debug": "parcel build frontend/public/*.html frontend/public/*.jpg frontend/public/*.ico frontend/public/*.png --dist-dir frontend/dist",
-    "start": "node server.js"
+    "dev": "cd frontend && next dev",
+    "build": "cd frontend && next build",
+    "start": "cd frontend && next start"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,15 @@
   },
   "homepage": "https://github.com/kylesadler/NodeJS-React-MongoDB-starter#readme",
   "dependencies": {
+    "next": "latest",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "compression": "^1.7.4",
     "express": "^4.17.2",
+    "mongodb": "^4.7.0",
     "parcel": "^2.3.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-ga": "^3.3.1",
+    "react-router-dom": "^6.3.0",
+    "tunnel-ssh": "^4.1.6"
   }
 }

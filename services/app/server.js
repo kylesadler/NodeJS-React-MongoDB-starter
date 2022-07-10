@@ -4,15 +4,16 @@ const compression = require("compression");
 const app = express();
 const server = require("http").createServer(app);
 const port = 8080;
+const fs = require("fs");
 
-const initDatabase = require("./backend/database/init");
+// const initDatabase = require("./backend/database/init");
 
-initDatabase({
-  username: process.env.SSH_USER,
-  host: process.env.DATABASE_IP,
-  privateKey: fs.readFileSync(process.env.SSH_PKEY),
-  databaseName: "prod",
-});
+// initDatabase({
+//   username: process.env.SSH_USER,
+//   host: process.env.DATABASE_IP,
+//   privateKey: fs.readFileSync(process.env.SSH_PKEY),
+//   databaseName: "prod",
+// });
 
 // for testing
 // const corsOptions = {

@@ -1,0 +1,34 @@
+#!/bin/bash
+
+KIND_FILE=local-cluster.yaml
+TILT_FILE=Tiltfile
+
+down () {
+    tilt down
+    ctlptl delete -f $KIND_FILE
+}
+
+pruneall () {
+    down > /dev/null 2>&1
+    # TODO make this less dangerous
+    docker kill $(docker ps -q); docker system prune -af
+}
+
+
+case $1 in
+    pruneall)
+        pruneall
+        ;;
+    up)
+        ctlptl apply -f $KIND_FILE
+        tilt up -f $TILT_FILE
+        ;;
+    down)
+        down
+        ;;
+    *)
+        echo "Usage: $0 {up | down | pruneall}"
+        exit 1
+        ;;
+esac
+
