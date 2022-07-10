@@ -2,7 +2,7 @@ const express = require("express");
 const router = express();
 const http = require("http");
 const https = require("https");
-const DatabaseTable = require("./db/DatabaseTable");
+const DatabaseTable = require("../../../backend/database/DatabaseTable");
 const networkData = require("../frontend/src/util/NetworkRoutes/NetworkSelect/networkData");
 
 const simulationsTable = new DatabaseTable("simulations");
