@@ -1,5 +1,7 @@
 # NodeJS-React-MongoDB-starter
 
+Depreciated in favor of separated starter repos.
+
 ## Adding a new service
 
 - Add a new service by creating a new directory under `services/`. This directory should include a Tiltfile which builds and deploys k8s resources needed by the service.
